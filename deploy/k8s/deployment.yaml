@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: heart-check
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: heart-check
+  template:
+    metadata:
+      labels:
+        app: heart-check
+    spec:
+      containers:
+        - name: web
+          image: heart-check:latest
+          ports:
+            - containerPort: 80
