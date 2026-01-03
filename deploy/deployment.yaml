@@ -1,19 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: heart-check
+  name: heart-api-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: heart-check
+      app: heart-api
   template:
     metadata:
       labels:
-        app: heart-check
+        app: heart-api
     spec:
       containers:
-        - name: web
-          image: heart-check:latest
+        - name: heart-api
+          image: heart-mlops:latest
+          imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 80
+            - containerPort: 8000
