@@ -20,7 +20,7 @@ Complete end-to-end machine learning pipeline for predicting heart disease risk 
 
 1. Clone repository:
 
-git clone https://github.com/YOUR_USERNAME/Heart-Check.git
+git clone https://github.com/meraj1997/Heart-Check.git
 cd Heart-Check
 
 2. Setup Environment
